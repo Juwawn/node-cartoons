@@ -1,0 +1,21 @@
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F1D6B8;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #963484;
+}
+
+.card {
+    background-color: #989FCE;
+}
+
+.list-group-item {
+    background-color: #989FCE;
+    border: none;
+}

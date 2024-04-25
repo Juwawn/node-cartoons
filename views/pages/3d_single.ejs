@@ -1,0 +1,38 @@
+<%- include('../partials/header'); %>
+
+<main class="main" id="3dSinglesMain">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="toggles d-flex justify-content-evenly">
+                    <% if (data.id > 1) { %>
+                        <a href="/3d/<%= data.id - 1 %>">
+                            &lt;&lt;Prev
+                        </a>    
+                    <% } %>
+            <!-- set count in twoDRoutes -->
+                    <% if (data.id < count) { %>
+                        <a href="/3d/<%= data.id + 1 %>">
+                            Next&gt;&gt;
+                        </a>
+                    <% } %>
+                </div>
+                <img src="<%= data.image %>" alt="<%= data.title %>" class="img-fluid single-img h-50 w-100">
+            </div>
+            <div class="col-md-5">
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <div class="card-heading my-2">
+                            Show: <%= data.title %>
+                        </div>
+                        <p class="card-text">
+                            Synopsis: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea et, illum numquam id cumque, culpa repellendus, natus quidem dolore esse maiores! Eos tempora ipsam accusantium deleniti, explicabo repellat minima, excepturi consectetur eius quam fugit mollitia illum numquam natus praesentium! Nam dicta aspernatur, aperiam amet nulla repudiandae fuga? Assumenda et exercitationem, eum dolore ullam quaerat nulla, dignissimos delectus adipisci magni maxime corporis facere explicabo, aut alias ut impedit laudantium. Minima amet odit libero labore doloremque maxime pariatur nesciunt accusantium? Mollitia laboriosam repellendus et earum iusto similique, architecto nostrum excepturi placeat, quibusdam fugiat, molestiae voluptates totam nisi nemo? Maxime quibusdam voluptates veritatis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('../partials/footer'); %>

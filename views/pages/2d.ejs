@@ -1,0 +1,35 @@
+<%- include('../partials/header'); %>
+
+<main class="main" id="2dMain">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-5 g-4">
+            <% data.forEach(item => { %>
+                <div class="col">
+                    <div class="card mt-4">
+                        <img src="<%= item.image %>" alt="<%= item.title %>" class="img-fluid card-img card-img-top">
+                        <div class="card-body h-50">
+                            <h2 class="card-heading"><%= item.title %></h2>
+                            <p class="card-text text-capitalize">
+                                <ul class="list-group">
+                                    <li class="list-group-item group text-capitalize">creator: <%= item.creator %></li>
+                                    <li class="list-group-item text-capitalize">year: <%= item.year %></li>
+                                    <li class="list-group-item text-capitalize">genre: <%= item.genre %></li>
+                                    <li class="list-group-item text-capitalize">episodes: <%= item.episodes %></li>
+                                    <li class="list-group-item text-capitalize">runtime: <%= item.runtime_in_minutes %></li>
+                                    <li class="list-group-item text-capitalize">rating: <%= item.rating %></li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="card-footer text-capitalize">
+                            <a href="/2d/<%= item.id %>" class="card-footer-link nav-link text-capitalize text-center">
+                                more info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</main>
+
+<%- include('../partials/footer'); %>
